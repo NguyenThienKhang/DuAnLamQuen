@@ -28,9 +28,6 @@ namespace DuAnLamQuen
                 CheckBoxList1.Items.Add(new ListItem("Đá bóng"));
                 CheckBoxList1.Items.Add(new ListItem("Học"));
 
-
-
-
             }
         }
 
