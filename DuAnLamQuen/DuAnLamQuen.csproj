@@ -73,6 +73,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DangKyThanhVien.aspx" />
     <Content Include="DangKyThongTin.aspx" />
     <Content Include="DonDatHang.aspx" />
     <Content Include="Global.asax" />
@@ -190,6 +191,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangKyThanhVien.aspx.cs">
+      <DependentUpon>DangKyThanhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKyThanhVien.aspx.designer.cs">
+      <DependentUpon>DangKyThanhVien.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DangKyThongTin.aspx.cs">
       <DependentUpon>DangKyThongTin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

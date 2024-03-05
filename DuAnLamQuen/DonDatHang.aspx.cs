@@ -32,16 +32,24 @@ namespace DuAnLamQuen
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string ketqua = "";
-            ketqua += "<ul>";
-            ketqua += $"<li> Khánh hàng{txtKhanhHang.Text}</li>";
-            ketqua += $"<li> Địa chỉ:{txtDiaChi.Text}</li>";
-            ketqua += $"<li> Địa chỉ:{txtMaSoThue.Text}</li>";         
-            //trả kết qủa
-            lbtKetQua.Text = ketqua;
+            string kq = "<h1>HOÁ ĐƠN ĐẶT HÀNG</h1>";
+            kq += $"<b>Khách hàng: </b> {txtKhanhHang.Text}<br/>";
+            kq += $"<b>Địa chỉ: </b> {txtDiaChi.Text}<br/>";
+            kq += $"<b>Mã số thuế: </b> {txtMaSoThue.Text}<br/><br/>";
+            kq += "<b>Đặt các loại bánh sau:</b>";
+            kq += "<table class='table table-bordered text-danger'>";
+            int i = 0;
+            foreach (ListItem item in LisLoaibanh.Items)
+            {
+                i++;
+                int vt = item.Text.IndexOf("(");
+                string ten = item.Text.Substring(0, vt);
+                kq += $"<tr> <td>{ten}</td> <td>{item.Value}</td> </tr>";
+            }
+            kq += "</table>";
 
+            lbtKetQua.Text = kq;
         }
-
         protected void btXoa_Click(object sender, EventArgs e)
         {
             // xóa 1 chỉ mục
