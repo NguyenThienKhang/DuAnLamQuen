@@ -9,7 +9,7 @@
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
 <body>
     <form id="form1" runat="server">
-        <h1 class="text-center text-danger">HỒ SƠ ĐĂNG KÝ</h1>
+        <h1 class="text-center text-danger">HỒ SƠ ĐĂNG KÝ "THIỆN KHANG"</h1>
         <div class="container p-3 my-3">
             <div class="row border border-primary">
                 <div class="col-md-6 border-right">
@@ -34,13 +34,16 @@
                     <div class="form-group">
                         <label for="txtHoTen">Họ tên khách hàng:</label>
                         <asp:TextBox ID="txtHoTen" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvTenKhachHang" runat="server" ErrorMessage="Họ tên không được rổng" ControlToValidate="txtHoTen"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvTenKhachHang" runat="server" ErrorMessage="Họ tên không được rổng" ControlToValidate="txtHoTen" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                         <label for="txtNgaySinh">Ngày sinh</label>
                         <asp:DropDownList ID="ddlNgay" runat="server" Width="20%"></asp:DropDownList>/
                        <asp:DropDownList ID="ddlThang" runat="server" Width="20%"></asp:DropDownList>/
                        <asp:DropDownList ID="ddlNam" runat="server" Width="20%"></asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Chưa chọn ngày sinh" ControlToValidate="ddlNgay" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Chưa chọn tháng sinh" ControlToValidate="ddlThang" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Chưa chọn năm sinh" ControlToValidate="ddlNam" ForeColor="#FF0066"></asp:RequiredFieldValidator>
 
                     </div>
                     <div class="form-group">
