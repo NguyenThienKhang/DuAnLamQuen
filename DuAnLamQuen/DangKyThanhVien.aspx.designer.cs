@@ -24,13 +24,22 @@ namespace DuAnLamQuen
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtTen control.
+        /// txtTenDangNhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTen;
+        protected global::System.Web.UI.WebControls.TextBox txtTenDangNhap;
+
+        /// <summary>
+        /// frvTenDN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frvTenDN;
 
         /// <summary>
         /// txtPass control.
@@ -42,6 +51,15 @@ namespace DuAnLamQuen
         protected global::System.Web.UI.WebControls.TextBox txtPass;
 
         /// <summary>
+        /// rfv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv;
+
+        /// <summary>
         /// txtNhapLaiPass control.
         /// </summary>
         /// <remarks>
@@ -51,6 +69,24 @@ namespace DuAnLamQuen
         protected global::System.Web.UI.WebControls.TextBox txtNhapLaiPass;
 
         /// <summary>
+        /// rfvMKNL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMKNL;
+
+        /// <summary>
+        /// cpvNLMK0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cpvNLMK0;
+
+        /// <summary>
         /// txtHoTen control.
         /// </summary>
         /// <remarks>
@@ -58,6 +94,15 @@ namespace DuAnLamQuen
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtHoTen;
+
+        /// <summary>
+        /// rfvTenKhachHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTenKhachHang;
 
         /// <summary>
         /// ddlNgay control.
@@ -96,6 +141,15 @@ namespace DuAnLamQuen
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rfvEmail;
+
+        /// <summary>
         /// txtThuNhap control.
         /// </summary>
         /// <remarks>
@@ -103,6 +157,15 @@ namespace DuAnLamQuen
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtThuNhap;
+
+        /// <summary>
+        /// rvdThuNhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvdThuNhap;
 
         /// <summary>
         /// CheckGioiTinh control.
@@ -139,5 +202,23 @@ namespace DuAnLamQuen
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// lblKetQua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblKetQua;
+
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }
