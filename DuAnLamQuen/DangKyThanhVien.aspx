@@ -53,7 +53,7 @@
                     </div>
                     <label for="txtThuNhap">Thu nhập:</label>
                     <asp:TextBox ID="txtThuNhap" CssClass="form-control" runat="server"></asp:TextBox>
-                    <asp:RangeValidator ID="rvdThuNhap" runat="server" ErrorMessage="Thu nhập từ 1000000vnd đến 50000000vnd" ControlToValidate="txtThuNhap" ForeColor="#FF0066" MaximumValue="50000000" MinimumValue="1000000" Type="Integer"></asp:RangeValidator>
+                    <asp:RangeValidator ID="rvdThuNhap" runat="server" ErrorMessage="Thu nhập từ 1.000.000vnd đến 5.000.0000vnd" ControlToValidate="txtThuNhap" ForeColor="#FF0066" MaximumValue="50000000" MinimumValue="1000000" Type="Integer"></asp:RangeValidator>
 
                     <div class="form-group">
                         <label for="txtGioiTinh">Giới tính:</label>
@@ -72,10 +72,12 @@
                     <asp:Button CssClass="btn btn-primary m-5" ID="Button1" runat="server" Text="Đăng ký" OnClick="Button1_Click" />
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <h1 class="bg-success text-white">Hồ sơ khách hàng</h1>
-                    <asp:Label ID="lblKetQua" runat="server" Text="Kết quả"></asp:Label>
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Danh sách lỗi" />
+                    <div class="text-info">
+                    <asp:Label ID="lblKetQua" runat="server" Text=""></asp:Label>
+                        </div>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Danh sách lỗi" ForeColor="Red" />
                 </div>
             </div>
         </div>

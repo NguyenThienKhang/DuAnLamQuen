@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -47,15 +48,25 @@ namespace DuAnLamQuen
             string ketQua = "";
             ketQua += $"<li>Tên đăng nhập:<b> {txtTenDangNhap.Text}</b></li>";
             // Password
-            if (txtPass.Text == txtNhapLaiPass.Text)
-            {
-                ketQua += $"<li>Mật khẩu:<b>{txtPass.Text}</b><li>";
-            }
-           
-              
+            //   if (txtPass.Text == txtNhapLaiPass.Text)
+            //  {
+            ketQua += $"<li>Mật khẩu:<b>{txtPass.Text}</b><li>";
+              //}      
             ketQua += $"<li>Họ tên khách hàng:<b>{txtHoTen.Text}</b></li>";
             ketQua += $"<li>Ngày tháng năm sinh:<b>{ddlNgay.Text+"/"+ddlThang.Text+"/"+ddlNam.Text}</b></li>";
-            ketQua += $"<li>Thu nhập:<b>{txtThuNhap.Text}</b></li>";
+            // định dạng tiền
+
+            // Định dạng tiền tệ cho chuỗi thu nhập
+            //decimal thuNhap = decimal.Parse(txtThuNhap.Text);
+            //string thuNhapFormatted = string.Format(new CultureInfo("vi-VN"), "{0:C}", thuNhap);
+
+            //// Thêm vào chuỗi kết quả
+            //ketQua += $"<li>Thu nhập: <b>{thuNhapFormatted}</b></li>";
+
+            double thunhap = double.Parse(txtThuNhap.Text);
+           string chuoi=  string.Format("{0:#,0.#} VNĐ", Convert.ToDecimal(thunhap));
+            ketQua += $"<li>Thu nhập:<b>{chuoi}</b></li>";
+
             if (CheckGioiTinh.Checked)
             {
                 ketQua +=$"<li>Giới tính:<b>{CheckGioiTinh.Text}</b></li>";
@@ -66,9 +77,7 @@ namespace DuAnLamQuen
             }
 
            ketQua +=$"<li>Địa chỉ:<b>{txtDiaChi.Text}</b></li>";
-            ketQua += $"<li>Điện thoại:<b>{txtDienThoai.Text}</b></li>";
-
-            
+            ketQua += $"<li>Điện thoại:<b>{txtDienThoai.Text}</b></li>";         
             lblKetQua.Text =ketQua;
         }
     }
