@@ -39,20 +39,20 @@ namespace DuAnLamQuen
                     ListItem listItem = new ListItem(year.ToString());
                     ddlNam.Items.Add(listItem);
                 }
-
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             string ketQua = "";
+            ketQua += $"<li>Họ tên khách hàng:<b>{txtHoTen.Text}</b></li>";
+
             ketQua += $"<li>Tên đăng nhập:<b> {txtTenDangNhap.Text}</b></li>";
             // Password
             //   if (txtPass.Text == txtNhapLaiPass.Text)
             //  {
-            ketQua += $"<li>Mật khẩu:<b>{txtPass.Text}</b><li>";
+            ketQua += $"<li>Mật khẩu:<b>{txtPass.Text}</b></li>";
               //}      
-            ketQua += $"<li>Họ tên khách hàng:<b>{txtHoTen.Text}</b></li>";
             ketQua += $"<li>Ngày tháng năm sinh:<b>{ddlNgay.Text+"/"+ddlThang.Text+"/"+ddlNam.Text}</b></li>";
             // định dạng tiền
 
@@ -64,9 +64,9 @@ namespace DuAnLamQuen
             //ketQua += $"<li>Thu nhập: <b>{thuNhapFormatted}</b></li>";
 
             double thunhap = double.Parse(txtThuNhap.Text);
-           string chuoi=  string.Format("{0:#,0.#} VNĐ", Convert.ToDecimal(thunhap));
+            string chuoi=  string.Format("{0:#,0.#} VNĐ", Convert.ToDecimal(thunhap));
             ketQua += $"<li>Thu nhập:<b>{chuoi}</b></li>";
-
+            //Giới tính
             if (CheckGioiTinh.Checked)
             {
                 ketQua +=$"<li>Giới tính:<b>{CheckGioiTinh.Text}</b></li>";
@@ -75,8 +75,9 @@ namespace DuAnLamQuen
             {
                 ketQua += $"<li>Giới tính:<b>{"Nữ"}</b></li>";
             }
-
+            //adress
            ketQua +=$"<li>Địa chỉ:<b>{txtDiaChi.Text}</b></li>";
+            //phone number
             ketQua += $"<li>Điện thoại:<b>{txtDienThoai.Text}</b></li>";         
             lblKetQua.Text =ketQua;
         }

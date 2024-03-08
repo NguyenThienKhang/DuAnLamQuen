@@ -6,7 +6,6 @@
 <head runat="server">
     <title></title>
 </head>
-
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
 <body>
     <form id="form1" runat="server">

@@ -9,7 +9,7 @@
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
 <body>
     <form id="form1" runat="server">
-        <h1 class="text-center text-danger">HỒ SƠ ĐĂNG KÝ "THIỆN KHANG"</h1>
+        <h1 class="text-center text-danger">HỒ SƠ ĐĂNG KÝ</h1>
         <div class="container p-3 my-3">
             <div class="row border border-primary">
                 <div class="col-md-6 border-right">
@@ -17,12 +17,14 @@
                     <div class="form-group">
                         <label for="txtTen">Tên đăng nhập:</label>
                         <asp:TextBox ID="txtTenDangNhap" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="frvTenDN" runat="server" ErrorMessage="Tên đăng nhập không được rỗng:" ControlToValidate="txtTenDangNhap" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="frvTenDN" runat="server" ErrorMessage="Tên đăng nhập không được rỗng:" ControlToValidate="txtTenDangNhap" ForeColor="#FF0066" Text="(*)"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revTenDangNhap" runat="server" ErrorMessage="Tên đăng nhập không hợp lệ !" ControlToValidate="txtTenDangNhap" ValidationExpression="[\d|\w|!|&|_]{8}[\d|\w|!|&|_]+" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </div>
                     <div class="form-group">
                         <label for="txtPass">Mật khẩu:</label>
                         <asp:TextBox type="password" CssClass="form-control" ID="txtPass" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfv" runat="server" ErrorMessage="Mật khẩu không được rỗng!" ControlToValidate="txtPass" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfv" runat="server" ErrorMessage="Mật khẩu không được rỗng!" ControlToValidate="txtPass" Text="(*)" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+
                     </div>
                     <div class="form-group">
                         <label for="txtNhapLaiPass">Nhập lại mật khẩu:</label>
@@ -49,7 +51,8 @@
                     <div class="form-group">
                         <label for="txtEmail">Email:</label>
                         <asp:TextBox type="email" CssClass="form-control" ID="txtEmail" runat="server"></asp:TextBox>
-                        <asp:RegularExpressionValidator ID="rfvEmail" runat="server" ErrorMessage="Email không hợp lệ" ControlToValidate="txtEmail" ForeColor="#FF0066" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="rfvEmail" runat="server"
+                            ErrorMessage="Email không hợp lệ" ControlToValidate="txtEmail" ForeColor="#FF0066" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </div>
                     <label for="txtThuNhap">Thu nhập:</label>
                     <asp:TextBox ID="txtThuNhap" CssClass="form-control" runat="server"></asp:TextBox>
@@ -70,13 +73,12 @@
                         <asp:TextBox ID="txtDienThoai" runat="server"></asp:TextBox>
                     </div>
                     <asp:Button CssClass="btn btn-primary m-5" ID="Button1" runat="server" Text="Đăng ký" OnClick="Button1_Click" />
-
                 </div>
                 <div class="col-md-6 ">
                     <h1 class="bg-success text-white">Hồ sơ khách hàng</h1>
                     <div class="text-info">
-                    <asp:Label ID="lblKetQua" runat="server" Text=""></asp:Label>
-                        </div>
+                        <asp:Label ID="lblKetQua" runat="server" Text=""></asp:Label>
+                    </div>
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Danh sách lỗi" ForeColor="Red" />
                 </div>
             </div>
