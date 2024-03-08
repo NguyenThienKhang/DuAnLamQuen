@@ -75,11 +75,18 @@ namespace DuAnLamQuen
             {
                 ketQua += $"<li>Giới tính:<b>{"Nữ"}</b></li>";
             }
+            ketQua += $"<li>Email:<b>{txtEmail.Text}</b></li>";
+
             //adress
-           ketQua +=$"<li>Địa chỉ:<b>{txtDiaChi.Text}</b></li>";
+            ketQua += $"<li>Địa chỉ:<b>{txtDiaChi.Text}</b></li>";
             //phone number
             ketQua += $"<li>Điện thoại:<b>{txtDienThoai.Text}</b></li>";         
             lblKetQua.Text =ketQua;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            res
         }
     }
 }

@@ -9,11 +9,11 @@
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
 <body>
     <form id="form1" runat="server">
-        <h1 class="text-center text-danger">HỒ SƠ ĐĂNG KÝ</h1>
+        <h1 class="text-center text-danger mt-3">HỒ SƠ ĐĂNG KÝ</h1>
         <div class="container p-3 my-3">
             <div class="row border border-primary">
-                <div class="col-md-6 border-right">
-                    <h1 class="bg-success text-white">Thông tin đăng nhập</h1>
+                <div class="col-md-8 border-right">
+                    <h1 class="bg-warning text-white text-center">Thông tin đăng nhập</h1>
                     <div class="form-group">
                         <label for="txtTen">Tên đăng nhập:</label>
                         <asp:TextBox ID="txtTenDangNhap" CssClass="form-control" runat="server"></asp:TextBox>
@@ -29,14 +29,14 @@
                     <div class="form-group">
                         <label for="txtNhapLaiPass">Nhập lại mật khẩu:</label>
                         <asp:TextBox type="password" CssClass="form-control" ID="txtNhapLaiPass" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvMKNL" runat="server" ErrorMessage="Mật khẩu nhập lại không được rỗng!" ControlToValidate="txtNhapLaiPass" Display="Dynamic" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvMKNL" runat="server" ErrorMessage="Mật khẩu nhập lại không được rỗng!" ControlToValidate="txtNhapLaiPass" Display="Dynamic" Text="(*)" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="cpvNLMK0" runat="server" ErrorMessage="Nhập lại mật khẩu không đúng!" ControlToCompare="txtNhapLaiPass" ControlToValidate="txtPass" ForeColor="#FF0066"></asp:CompareValidator>
                     </div>
-                    <h1 class="bg-success text-white">Thông tin cá nhân</h1>
+                    <h1 class="bg-warning text-white text-center">Thông tin cá nhân</h1>
                     <div class="form-group">
                         <label for="txtHoTen">Họ tên khách hàng:</label>
                         <asp:TextBox ID="txtHoTen" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvTenKhachHang" runat="server" ErrorMessage="Họ tên không được rổng" ControlToValidate="txtHoTen" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvTenKhachHang" runat="server" ErrorMessage="Họ tên không được rổng" Text="(*)" ControlToValidate="txtHoTen" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                         <label for="txtNgaySinh">Ngày sinh</label>
@@ -56,7 +56,7 @@
                     </div>
                     <label for="txtThuNhap">Thu nhập:</label>
                     <asp:TextBox ID="txtThuNhap" CssClass="form-control" runat="server"></asp:TextBox>
-                    <asp:RangeValidator ID="rvdThuNhap" runat="server" ErrorMessage="Thu nhập từ 1.000.000vnd đến 5.000.0000vnd" ControlToValidate="txtThuNhap" ForeColor="#FF0066" MaximumValue="50000000" MinimumValue="1000000" Type="Integer"></asp:RangeValidator>
+                    <asp:RangeValidator ID="rvdThuNhap" runat="server" ErrorMessage="Thu nhập từ 1.000.000vnd đến 50.000.0000vnd" ControlToValidate="txtThuNhap" ForeColor="#FF0066" MaximumValue="50000000" MinimumValue="1000000" Type="Integer"></asp:RangeValidator>
 
                     <div class="form-group">
                         <label for="txtGioiTinh">Giới tính:</label>
@@ -72,10 +72,13 @@
                         <label for="txtDienThoai">Điện thoại:</label>
                         <asp:TextBox ID="txtDienThoai" runat="server"></asp:TextBox>
                     </div>
-                    <asp:Button CssClass="btn btn-primary m-5" ID="Button1" runat="server" Text="Đăng ký" OnClick="Button1_Click" />
-                </div>
-                <div class="col-md-6 ">
-                    <h1 class="bg-success text-white">Hồ sơ khách hàng</h1>
+                    <div class="text-center mb-2">               
+                        <asp:Button CssClass="btn btn-primary" Width="25%" ID="Button1" runat="server" Text="Đăng ký" OnClick="Button1_Click" />
+
+                    </div>
+                 </div>
+                <div class="col-md-4 border border-left border-right-0 border-top-0 border-bottom-0 border-primary">
+                    <h1 class="bg-warning text-white text-center">Hồ sơ khách hàng</h1>
                     <div class="text-info">
                         <asp:Label ID="lblKetQua" runat="server" Text=""></asp:Label>
                     </div>
